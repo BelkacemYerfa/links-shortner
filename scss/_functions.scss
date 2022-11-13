@@ -1,0 +1,81 @@
+@import './variables' ; 
+
+//functions
+@function getPrimeColor($Color-name){
+ @return map-get($PrimeColorsMap, $Color-name );
+}
+
+@function getNaturelColor($Color-name){
+ @return map-get($NaturelColorsMap, $Color-name);
+}
+
+@function getWeight($Weight-type){
+ @return map-get($WeightTypes, $Weight-type);
+}
+
+//mixins
+
+@mixin sizing() {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+@mixin center(){
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+@mixin styleBtnSignUp(){
+ height:40px;
+ width:150px;
+ background-color:getPrimeColor(one);
+ border-radius:20px;
+ transition: opacity .35s linear;
+ &:hover{
+  opacity:0.7
+ }
+}
+
+@mixin MakeCard() {
+  height: 160px;
+  width: 75%;
+  background-color: getPrimeColor(two);
+  border-radius: 15px;
+}
+
+@mixin MakeLinkCardShorter(){
+  height: 80px;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@mixin MakeInput() {
+ height: 45px;
+ width: 70%;
+ border-radius: 7.5px;
+ border: none;
+ &:focus{
+  outline: getPrimeColor(one);
+ }
+}
+
+@mixin MakeShorterBtnMobile() {
+ width: 80%;
+}
+
+@mixin MakePResentationCard() {
+  height: 220px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+@mixin MakeSignUpCard() {
+  height: 200px;
+  width: 100%;
+  background-color: getPrimeColor(two);
+  background-image: url(../images/bg-boost-desktop.svg);
+}

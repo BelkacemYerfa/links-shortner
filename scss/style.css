@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body .CopiedState {
+  background-color: hsl(257deg, 27%, 26%);
+  transition: background-color 0.25s linear;
+}
+body header {
+  margin-bottom: 100px;
+}
+body header nav {
+  padding: 5px 35px;
+  height: 100px;
+}
+body header nav ul {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body header nav ul {
+    flex-direction: column;
+  }
+  body header nav ul a {
+    margin-block: 10px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  body header nav .navList .ImageIcon {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+  }
+}
+body header nav .navList .ElementsList {
+  width: 80%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  body header nav .navList .ElementsList {
+    transform: translateY(-150%);
+    transition: transform 0.35s linear;
+    background-color: hsl(257deg, 27%, 26%);
+    height: 300px;
+    border-radius: 20px;
+    width: 90%;
+    margin-left: -10%;
+    margin-top: 50px;
+    justify-content: space-around !important;
+    padding: 20px;
+  }
+  body header nav .navList .ElementsList hr {
+    display: block !important;
+    width: 90%;
+  }
+}
+body header nav .navList .ElementsList .LinksList a, body header nav .navList .ElementsList .BtnsList a {
+  font-family: "Poppins", sans-serif;
+  margin-inline: 10px;
+  text-decoration: none;
+  color: hsl(257deg, 7%, 63%);
+  font-weight: 700;
+  font-size: 18px;
+  transition: color 0.35s linear;
+}
+@media screen and (max-width: 600px) {
+  body header nav .navList .ElementsList .LinksList a, body header nav .navList .ElementsList .BtnsList a {
+    margin-left: -15% !important;
+    color: white;
+  }
+}
+body header nav .navList .ElementsList .LinksList a:hover, body header nav .navList .ElementsList .BtnsList a:hover {
+  color: hsl(260deg, 8%, 14%);
+}
+body header nav .navList .ElementsList .BtnsList #btnSignUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 150px;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 20px;
+  transition: opacity 0.35s linear;
+  color: white;
+}
+body header nav .navList .ElementsList .BtnsList #btnSignUp:hover {
+  opacity: 0.7;
+}
+body header nav .navList .toggle {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  height: 31px;
+  width: 40px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body header nav .navList .toggle {
+    display: flex;
+  }
+}
+body header nav .navList .toggle .make {
+  height: 5px;
+  width: 100%;
+  background-color: hsl(257deg, 7%, 63%);
+  border-radius: 10px;
+}
+body header .headFacing {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body header .headFacing {
+    flex-wrap: wrap-reverse;
+  }
+}
+body header .headFacing .left {
+  margin-left: 80px;
+  margin-top: -20px;
+  flex-basis: 60%;
+}
+@media screen and (max-width: 600px) {
+  body header .headFacing .left {
+    text-align: center;
+  }
+  body header .headFacing .left h1 {
+    font-size: 35px !important;
+  }
+  body header .headFacing .left p {
+    font-size: 20px !important;
+    margin-top: 10px !important;
+  }
+  body header .headFacing .left p br {
+    display: none;
+  }
+}
+body header .headFacing .left h1 {
+  font-size: 70px;
+  line-height: 1em;
+  color: hsl(260deg, 8%, 14%);
+  font-weight: 700;
+}
+body header .headFacing .left p {
+  color: hsl(257deg, 7%, 63%);
+  margin-top: -40px;
+  font-size: 18px;
+}
+body header .headFacing .left a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+body header .headFacing .left #btn {
+  height: 40px;
+  width: 150px;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 20px;
+  transition: opacity 0.35s linear;
+  padding: 10px 25px;
+}
+body header .headFacing .left #btn:hover {
+  opacity: 0.7;
+}
+body header .headFacing .right {
+  overflow: hidden;
+}
+body header .headFacing .right img {
+  position: relative;
+  right: -5px;
+  z-index: -1;
+}
+@media screen and (max-width: 600px) {
+  body header .headFacing .right img {
+    height: 350px !important;
+    width: auto;
+  }
+}
+body main {
+  min-height: 120vh;
+  background-color: hsla(0deg, 0%, 75%, 0.5);
+  padding-left: 160px;
+}
+@media screen and (max-width: 600px) {
+  body main {
+    position: relative;
+    padding-left: 50px !important;
+  }
+}
+body main .card {
+  position: absolute;
+  top: 600px;
+  background-image: url(../images/bg-shorten-desktop.svg);
+  height: 160px;
+  width: 75%;
+  background-color: hsl(257deg, 27%, 26%);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body main .card {
+    top: 0% !important;
+  }
+}
+body main .card .centerElements {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 600px) {
+  body main .card .centerElements {
+    flex-wrap: wrap;
+  }
+}
+body main .card .centerElements input#inputLink {
+  height: 45px;
+  width: 70%;
+  border-radius: 7.5px;
+  border: none;
+  text-indent: 20px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 600px) {
+  body main .card .centerElements input#inputLink {
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}
+body main .card .centerElements input#inputLink:focus {
+  outline: hsl(180deg, 66%, 49%);
+}
+body main .card .centerElements ::-moz-placeholder {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+body main .card .centerElements :-ms-input-placeholder {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+body main .card .centerElements ::placeholder {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+body main .card .centerElements .ShortBtn {
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 20px;
+  transition: opacity 0.35s linear;
+  border: none;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  transition: all 0.35s linear;
+}
+@media screen and (max-width: 600px) {
+  body main .card .centerElements .ShortBtn {
+    width: 80%;
+    border-radius: 5px;
+  }
+}
+body main .card .centerElements .ShortBtn:hover {
+  opacity: 0.7;
+}
+body main .card .centerElements .ShortBtn:hover {
+  background-color: hsla(180deg, 66%, 49%, 0.75);
+  opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  body main .MakeCardLink #CardHolder ul {
+    margin-top: 100px;
+    margin-left: -5%;
+  }
+}
+body main .MakeCardLink #CardHolder ul .link-card {
+  height: 80px;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 10px;
+}
+@media screen and (max-width: 600px) {
+  body main .MakeCardLink #CardHolder ul .link-card {
+    height: 160px !important;
+  }
+}
+body main .MakeCardLink #CardHolder ul .link-card .centerElements {
+  margin-inline: 60px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body main .MakeCardLink #CardHolder ul .link-card .centerElements {
+    text-align: center !important;
+  }
+  body main .MakeCardLink #CardHolder ul .link-card .centerElements textarea {
+    font-size: 15px;
+  }
+}
+body main .MakeCardLink #CardHolder ul .link-card .centerElements textarea {
+  font-family: "Poppins", sans-serif;
+  resize: none;
+  border: none;
+  outline: none;
+}
+body main .MakeCardLink #CardHolder ul .link-card .centerElements button {
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 20px;
+  transition: opacity 0.35s linear;
+  border: none;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  transition: all 0.35s linear;
+}
+@media screen and (max-width: 600px) {
+  body main .MakeCardLink #CardHolder ul .link-card .centerElements button {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+body main .MakeCardLink #CardHolder ul .link-card .centerElements button:hover {
+  opacity: 0.7;
+}
+body main .MakeCardLink #CardHolder ul .link-card .centerElements button:hover {
+  background-color: hsla(180deg, 66%, 49%, 0.75);
+  opacity: 1;
+}
+body main .titlePresentation {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body main .titlePresentation {
+    margin-top: 100px;
+  }
+  body main .titlePresentation .components {
+    margin-left: -20%;
+  }
+}
+body main .titlePresentation .components {
+  text-align: center;
+}
+body main .titlePresentation .components h1 {
+  font-weight: 900;
+  color: hsl(260deg, 8%, 14%);
+}
+body main .titlePresentation .components p {
+  margin-inline: 12%;
+  color: hsl(257deg, 7%, 63%);
+}
+body main .cardsPresentation {
+  margin-top: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 1000px) {
+  body main .cardsPresentation {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+body main .cardsPresentation .cardA {
+  position: relative;
+  height: 220px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  body main .cardsPresentation .cardA {
+    margin-left: -5%;
+    text-align: center;
+    margin-block: 10px;
+  }
+  body main .cardsPresentation .cardA .designedImage {
+    left: 35%;
+  }
+}
+body main .cardsPresentation .cardA .designedImage {
+  padding: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: hsl(257deg, 27%, 26%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -50px;
+}
+body main .cardsPresentation .cardA h2 {
+  color: hsl(260deg, 8%, 14%);
+  margin-top: 50px;
+}
+body main .cardsPresentation .cardA p {
+  color: hsl(257deg, 7%, 63%);
+}
+body main .cardsPresentation .Record {
+  transform: translateY(50px);
+}
+body main .cardsPresentation .Costumizabel {
+  transform: translateY(100px);
+}
+@media screen and (max-width: 600px) {
+  body footer {
+    margin-top: 200px;
+  }
+}
+body footer .up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  background-color: hsl(257deg, 27%, 26%);
+  background-image: url(../images/bg-boost-desktop.svg);
+}
+body footer .up .CenterElements {
+  text-align: center;
+}
+body footer .up .CenterElements h2 {
+  font-size: 30px;
+  color: white;
+}
+body footer .up .CenterElements a {
+  margin-left: 100px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 150px;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 20px;
+  transition: opacity 0.35s linear;
+  color: white;
+  opacity: 0.85;
+  transition: opacity 0.25s linear;
+}
+body footer .up .CenterElements a:hover {
+  opacity: 0.7;
+}
+body footer .up .CenterElements a:hover {
+  opacity: 1;
+}
+body footer .down {
+  padding-block: 50px;
+  padding-inline: 80px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: hsl(255deg, 11%, 22%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body footer .down {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+body footer .down .links {
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  body footer .down .links {
+    flex-wrap: wrap;
+    margin-left: 10%;
+  }
+}
+body footer .down .links ul {
+  display: flex;
+  flex-direction: column;
+}
+body footer .down .links ul a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.65;
+  margin-block: 10px;
+  transition: all 0.35s linear;
+}
+body footer .down .links ul a:hover {
+  color: hsl(180deg, 66%, 49%);
+  opacity: 1;
+}
+body footer .down .links h3 {
+  color: white;
+  font-size: 18px;
+}
+body footer .down .socialMedia {
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+}
+body footer .down .socialMedia a svg {
+  fill: white;
+  transition: all 0.35s linear;
+}
+body footer .down .socialMedia a svg:hover {
+  fill: hsl(180deg, 66%, 49%);
+}/*# sourceMappingURL=style.css.map */
